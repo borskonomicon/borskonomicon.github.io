@@ -16,19 +16,17 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 
 ## Ingredients
 - 1 1/2 cups (195 g) all-purpose flour
-- 2 teaspoons baking powder
-- 1/2 teaspoon baking soda
-- 1/4 teaspoon fine salt
+- 2 1/2 teaspoons baking powder
+- 1 teaspoon fine salt
 - 1 tablespoon granulated sugar
-- 1 1/4 cups (295 ml) milk, room temperature
+- 1 1/2 cups (355 ml) milk, room temperature
 - 1 large egg
-- 3 tablespoons (42 g) unsalted butter, melted and slightly cooled, plus more for the griddle
-- 1 teaspoon vanilla extract
-- 1/2 cup (85 g) semisweet chocolate chips, plus extra for topping if desired
+- 3 tablespoons (42 g) unsalted butter, melted, plus more for the griddle
+- 3/4 cup (130 g) semisweet chocolate chips, plus extra for topping if desired
 
 ## Instructions
-1. In a large bowl, whisk together the flour, baking powder, baking soda, salt, and sugar.
-2. In a separate bowl or large measuring cup, whisk the milk, egg, melted butter, and vanilla until smooth.
+1. In a large bowl, whisk together the flour, baking powder, salt, and sugar.
+2. In a separate bowl or large measuring cup, whisk the milk, egg, and melted butter until smooth.
 3. Pour the wet ingredients into the dry ingredients and stir with a spatula just until the batter is mostly combined; a few small lumps are fine. Fold in the chocolate chips. Let the batter rest for 5 minutes while you heat the griddle.
 4. Heat a lightly buttered skillet or griddle over medium heat. Pour 1/4-cup portions of batter onto the hot surface, leaving space between each pancake. Sprinkle a few extra chocolate chips on top if you like.
 5. Cook until the edges look set and bubbles form across the surface, 2–3 minutes. Flip and cook until the underside is golden and the center is cooked through, about 1–2 minutes more. Adjust the heat as needed to prevent burning.
