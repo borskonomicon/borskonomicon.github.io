@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set tags = page.extra.tags | default(value=[]) %}
+
+<section class="hero">
+    <a class="ghost" href="{{ get_url(path='recipes/') }}">← Back to recipes</a>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+        <p class="lede">{{ page.description }}</p>
+    {% endif %}
+    {% if page.extra.yield or page.extra.time or tags | length > 0 %}
+        <div class="meta-row">
+            {% if page.extra.yield %}
+                <span class="pill">{{ page.extra.yield }}</span>
+            {% endif %}
+            {% if page.extra.time %}
+                <span class="pill subtle">{{ page.extra.time }}</span>
+            {% endif %}
+            {% for tag in tags %}
+                <span class="pill subtle">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if page.extra.source %}
+        <p class="source-link">Source: <a href="{{ page.extra.source }}" target="_blank" rel="noopener">{{ page.extra.source }}</a></p>
+    {% endif %}
+</section>
+
+<section class="content">
+    {{ page.content | safe }}
+</section>
+{% endblock content %}
