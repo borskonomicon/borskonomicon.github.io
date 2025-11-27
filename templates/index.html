@@ -52,7 +52,7 @@
             {% set tags = recipe.extra.tags | default(value=[]) %}
             {% set description = recipe.description | default(value="") %}
             {% set searchable_tags = tags | join(sep=" ") %}
-            {% set search_text = (recipe.title ~ " " ~ description ~ " " ~ searchable_tags) | lower %}
+            {% set search_text = [recipe.title, description, searchable_tags] | join(sep=" ") | lower %}
             <article class="recipe-card" data-search="{{ search_text }}">
                 {% if recipe.extra.time %}
                     <p class="eyebrow">{{ recipe.extra.time }}</p>
