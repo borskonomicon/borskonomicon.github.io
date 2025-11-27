@@ -13,3 +13,10 @@ The site is built with [Zola](https://www.getzola.org/) and published through Gi
 2. Add front matter with a `title`, short `description`, and optional `extra` fields like `yield`, `time`, `source`, and `tags` so the landing page can surface useful context.
 3. Include the recipe title in the front matter, then list the yield, prep/bake times if available, ingredients, and step-by-step instructions in the body of the file.
 4. Preserve ingredient amounts exactly and keep instructions clear so the recipe remains faithfully reproducible. Track the source link in `extra.source` to credit the origin.
+
+## Accuracy checklist (important for LLM agents)
+- Always cross-check the vendored ingredient amounts against the upstream source. Use the site’s JSON-LD `recipeIngredient` list (e.g., `curl -L <url> | rg -n "recipeIngredient"`) or the printable recipe card instead of guessing from prose.
+- Mirror units and weights exactly as published (cups, grams, teaspoons, etc.). Do not “improve” or round numbers.
+- Copy prep/cook times, yield/servings, and oven temperature directly from the source.
+- If the source gives alternate ingredients (e.g., Greek yogurt or sour cream), keep the wording consistent with the source.
+- After editing, reread the source to confirm every quantity and instruction step matches before committing.
