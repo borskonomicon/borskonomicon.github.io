@@ -1,6 +1,12 @@
-# Chocolate Chip Banana Bread
-
-*Source: https://butternutbakeryblog.com/chocolate-chip-banana-bread/*
++++
+title = "Chocolate Chip Banana Bread"
+description = "Moist banana bread with chocolate chips, browned butter, and sour cream for a tender crumb."
+[extra]
+yield = "1 (9×5-inch) loaf"
+time = "Prep 20 minutes · Bake 55–65 minutes"
+source = "https://butternutbakeryblog.com/chocolate-chip-banana-bread/"
+tags = ["quick bread", "banana", "dessert"]
++++ 
 
 A moist, bakery-style banana bread studded with chocolate chips. Browning the butter deepens the flavor while sour cream keeps the crumb tender.
 
