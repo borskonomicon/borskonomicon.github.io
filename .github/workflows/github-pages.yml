@@ -16,6 +16,11 @@ concurrency:
 
 jobs:
   build:
+    # Build and deploy are kept as separate jobs because GitHub Pages expects
+    # the published artifact to come from an uploaded bundle rather than from a
+    # workspace that runs with elevated deploy permissions. This pattern limits
+    # the scope of the deploy token, makes it clear what files are deployed, and
+    # mirrors the configuration recommended in the Pages documentation.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
