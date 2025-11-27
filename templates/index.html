@@ -6,15 +6,95 @@
 {% elif section is defined %}
     {% set current = section %}
 {% endif %}
+{% set recipe_section = get_section(path="recipes/_index.md") %}
 
 <section class="hero">
+    <p class="eyebrow">Family archive</p>
     <h1>{{ current.title }}</h1>
     {% if current.description %}
         <p class="lede">{{ current.description }}</p>
     {% endif %}
+    <div class="hero-actions">
+        <a class="button" href="#recipes">Browse recipes</a>
+        <a class="ghost" href="{{ get_url(path="recipes/") }}">Open the catalog</a>
+    </div>
 </section>
 
-<section class="content">
-    {{ current.content | safe }}
+<section class="content two-column">
+    <div class="content-body">
+        {{ current.content | safe }}
+    </div>
+    <div class="content-panel">
+        <h2>What you’ll find</h2>
+        <ul class="feature-list">
+            <li>Recipes stored with full ingredients and steps so they stay usable even if the source disappears.</li>
+            <li>Source links included for credit and deeper reading.</li>
+            <li>Quick searching by title, ingredient, or tag to jump straight to a dish.</li>
+        </ul>
+    </div>
 </section>
+
+<section class="search-panel" id="recipes">
+    <div class="search-header">
+        <div>
+            <p class="eyebrow">Recipe catalog</p>
+            <h2>Find, search, and cook</h2>
+            <p class="lede">Type to filter the archive by recipe name, ingredient, or tag.</p>
+        </div>
+        <label class="search-box" for="recipe-search">
+            <span class="label">Search recipes</span>
+            <input id="recipe-search" type="search" placeholder="e.g., banana, chocolate, quick bread" autocomplete="off">
+        </label>
+    </div>
+
+    <div class="recipe-grid" id="recipe-grid">
+        {% for recipe in recipe_section.pages | sort(attribute="title") %}
+            {% set tags = recipe.extra.tags | default(value=[]) %}
+            {% set search_text = (recipe.title ~ " " ~ (recipe.description | default(value="")) ~ " " ~ (tags | join(sep=" "))) | lower %}
+            <article class="recipe-card" data-search="{{ search_text }}">
+                {% if recipe.extra.time %}
+                    <p class="eyebrow">{{ recipe.extra.time }}</p>
+                {% endif %}
+                <h3><a href="{{ recipe.permalink }}">{{ recipe.title }}</a></h3>
+                {% if recipe.description %}
+                    <p class="card-desc">{{ recipe.description }}</p>
+                {% endif %}
+                <div class="meta-row">
+                    {% if recipe.extra.yield %}
+                        <span class="pill">{{ recipe.extra.yield }}</span>
+                    {% endif %}
+                    {% for tag in tags %}
+                        <span class="pill subtle">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% if recipe.extra.source %}
+                    <p class="source-link">Source: <a href="{{ recipe.extra.source }}" target="_blank" rel="noopener">{{ recipe.extra.source }}</a></p>
+                {% endif %}
+            </article>
+        {% endfor %}
+        {% if recipe_section.pages | length == 0 %}
+            <p class="empty">No recipes have been added yet. Check back soon!</p>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    const searchInput = document.getElementById('recipe-search');
+    const cards = Array.from(document.querySelectorAll('.recipe-card'));
+    const grid = document.getElementById('recipe-grid');
+
+    function filterRecipes() {
+        const query = searchInput.value.trim().toLowerCase();
+        let matches = 0;
+        cards.forEach(card => {
+            const text = card.dataset.search;
+            const isMatch = text.includes(query);
+            card.style.display = isMatch ? '' : 'none';
+            if (isMatch) matches += 1;
+        });
+        grid.classList.toggle('no-results', matches === 0);
+    }
+
+    searchInput.addEventListener('input', filterRecipes);
+</script>
 {% endblock content %}

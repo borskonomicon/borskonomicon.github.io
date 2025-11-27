@@ -1,9 +1,9 @@
 # The URL the site will be built for
 base_url = "https://borskonomicon.github.io"
 
-title = "Borskonomicon"
+title = "Borskonomicon Recipes"
 
-description = "Personal site powered by Zola"
+description = "Family recipes preserved against link rot."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
