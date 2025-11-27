@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set recipes = section.pages | sort(attribute="title") %}
+{# When pagination is enabled, use the paginator; otherwise fall back to section.pages #}
+{% if paginator is defined %}
+    {% set recipes = paginator.pages %}
+{% else %}
+    {% set recipes = section.pages %}
+{% endif %}
+{% set recipes = recipes | sort(attribute="title") %}
 
 <section class="hero">
     <a class="ghost" href="{{ get_url(path='') }}">← Back home</a>
