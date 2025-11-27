@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
+    <meta name="description" content="{{ page.description | default(value=config.description) }}">
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-title" href="{{ config.base_url }}">{{ config.title }}</a>
+            <p class="site-tagline">{{ config.description }}</p>
+        </div>
+    </header>
+    <main class="container">
+        {% block content %}{% endblock content %}
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Built with <a href="https://www.getzola.org/">Zola</a> and deployed via GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
