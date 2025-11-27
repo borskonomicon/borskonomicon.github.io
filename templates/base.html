@@ -3,8 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
-    <meta name="description" content="{{ page.description | default(value=config.description) }}">
+    {% if page is defined %}
+        {% set current = page %}
+    {% elif section is defined %}
+        {% set current = section %}
+    {% endif %}
+
+    <title>{% if current is defined and current.title %}{{ current.title }} | {% endif %}{{ config.title }}</title>
+    {% if current is defined and current.description %}
+        <meta name="description" content="{{ current.description }}">
+    {% else %}
+        <meta name="description" content="{{ config.description }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
 </head>
 <body>
