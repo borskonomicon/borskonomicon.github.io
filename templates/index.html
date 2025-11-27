@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if page is defined %}
+    {% set current = page %}
+{% elif section is defined %}
+    {% set current = section %}
+{% endif %}
+
 <section class="hero">
-    <h1>{{ page.title }}</h1>
-    <p class="lede">{{ page.description }}</p>
+    <h1>{{ current.title }}</h1>
+    {% if current.description %}
+        <p class="lede">{{ current.description }}</p>
+    {% endif %}
 </section>
 
 <section class="content">
-    {{ page.content | safe }}
+    {{ current.content | safe }}
 </section>
 {% endblock content %}
