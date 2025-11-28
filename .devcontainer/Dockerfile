@@ -5,14 +5,12 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG ZOLA_VERSION=0.21.0
 ARG ZOLA_ARCH=
-ARG GH_TOKEN=
 
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
-        gh \
         git \
         sudo \
         tar; \
@@ -30,14 +28,9 @@ RUN set -eux; \
     zola_archive="/tmp/${zola_filename}"; \
     zola_url="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/${zola_filename}"; \
     curl -fsSL "${zola_url}" -o "${zola_archive}"; \
-    if [ -n "${GH_TOKEN:-}" ]; then \
-        GH_TOKEN="${GH_TOKEN}" gh attestation verify --owner getzola "${zola_archive}"; \
-    else \
-        echo "GH_TOKEN not provided; skipping attestation verification" >&2; \
-    fi; \
     tar -xf "${zola_archive}" -C /usr/local/bin zola; \
     rm "${zola_archive}"; \
-    apt-get purge -y gh tar; \
+    apt-get purge -y tar; \
     apt-get autoremove -y; \
     rm -rf /var/lib/apt/lists/*; \
     groupadd --gid "${USER_GID}" "${USERNAME}"; \
