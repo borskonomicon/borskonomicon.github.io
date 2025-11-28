@@ -319,6 +319,7 @@ main {
 
 .source-link a {
     color: var(--accent);
+    overflow-wrap: anywhere;
 }
 
 .empty {
