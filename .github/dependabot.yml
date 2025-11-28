@@ -4,6 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    target-branch: "main"
+    target-branch: "master"
+    commit-message:
+      prefix: "chore"
+  - package-ecosystem: "docker"
+    directory: "/.devcontainer"
+    schedule:
+      interval: "daily"
+    target-branch: "master"
     commit-message:
       prefix: "chore"

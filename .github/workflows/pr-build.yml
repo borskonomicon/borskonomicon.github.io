@@ -3,6 +3,9 @@ name: Validate Pages build
 on:
   pull_request:
 
+env:
+  ZOLA_VERSION: "0.21.0"
+
 permissions:
   contents: read
 
@@ -17,6 +20,6 @@ jobs:
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola
+          tool: zola@${{ env.ZOLA_VERSION }}
       - name: Build
         run: zola build

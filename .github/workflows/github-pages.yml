@@ -5,6 +5,9 @@ on:
     branches: ["master"]
   workflow_dispatch:
 
+env:
+  ZOLA_VERSION: "0.21.0"
+
 permissions:
   contents: read
   pages: write
@@ -30,7 +33,7 @@ jobs:
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola
+          tool: zola@${{ env.ZOLA_VERSION }}
       - name: Build
         run: zola build
       - name: Upload artifact
