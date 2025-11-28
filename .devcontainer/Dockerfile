@@ -19,8 +19,8 @@ RUN set -eux; \
     if [ -z "${release_arch}" ]; then \
         host_arch="$(dpkg --print-architecture)"; \
         case "${host_arch}" in \
-            amd64) release_arch="x86_64-unknown-linux-musl" ;; \
-            arm64) release_arch="aarch64-unknown-linux-musl" ;; \
+            amd64) release_arch="x86_64-unknown-linux-gnu" ;; \
+            arm64) release_arch="aarch64-unknown-linux-gnu" ;; \
             *) echo "Unsupported architecture: ${host_arch}" >&2; exit 1 ;; \
         esac; \
     fi; \
