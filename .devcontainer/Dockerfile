@@ -30,8 +30,6 @@ RUN set -eux; \
     curl -fsSL "${zola_url}" -o "${zola_archive}"; \
     tar -xf "${zola_archive}" -C /usr/local/bin zola; \
     rm "${zola_archive}"; \
-    apt-get purge -y tar; \
-    apt-get autoremove -y; \
     rm -rf /var/lib/apt/lists/*; \
     groupadd --gid "${USER_GID}" "${USERNAME}"; \
     useradd --uid "${USER_UID}" --gid "${USER_GID}" -m "${USERNAME}"; \
