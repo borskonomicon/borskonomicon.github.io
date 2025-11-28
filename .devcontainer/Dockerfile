@@ -3,7 +3,7 @@ FROM debian:trixie-slim
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
-ARG ZOLA_VERSION=0.19.2
+ARG ZOLA_VERSION=0.21.0
 ARG ZOLA_ARCH=x86_64-unknown-linux-gnu
 
 RUN set -eux; \
