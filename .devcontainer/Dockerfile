@@ -5,12 +5,14 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG ZOLA_VERSION=0.21.0
 ARG ZOLA_ARCH=
+ARG GH_TOKEN=
 
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
+        gh \
         git \
         sudo \
         tar; \
@@ -24,16 +26,18 @@ RUN set -eux; \
             *) echo "Unsupported architecture: ${host_arch}" >&2; exit 1 ;; \
         esac; \
     fi; \
-    zola_archive="/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
-    zola_url="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
-    zola_checksum_url="${zola_url}.sha256"; \
+    zola_filename="zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
+    zola_archive="/tmp/${zola_filename}"; \
+    zola_url="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/${zola_filename}"; \
     curl -fsSL "${zola_url}" -o "${zola_archive}"; \
-    curl -fsSL "${zola_checksum_url}" -o "${zola_archive}.sha256"; \
-    checksum="$(awk 'NF {print $1; exit}' "${zola_archive}.sha256")"; \
-    echo "${checksum}  ${zola_archive}" | sha256sum --check -; \
+    if [ -n "${GH_TOKEN:-}" ]; then \
+        GH_TOKEN="${GH_TOKEN}" gh attestation verify --owner getzola "${zola_archive}"; \
+    else \
+        echo "GH_TOKEN not provided; skipping attestation verification" >&2; \
+    fi; \
     tar -xf "${zola_archive}" -C /usr/local/bin zola; \
-    rm "${zola_archive}"*; \
-    apt-get purge -y tar; \
+    rm "${zola_archive}"; \
+    apt-get purge -y gh tar; \
     apt-get autoremove -y; \
     rm -rf /var/lib/apt/lists/*; \
     groupadd --gid "${USER_GID}" "${USERNAME}"; \

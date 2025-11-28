@@ -13,4 +13,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build devcontainer image
-        run: docker build -f .devcontainer/Dockerfile .
+        run: docker build -f .devcontainer/Dockerfile --build-arg GH_TOKEN=${{ secrets.GITHUB_TOKEN }} .
