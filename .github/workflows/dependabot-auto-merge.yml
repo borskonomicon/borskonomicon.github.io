@@ -22,7 +22,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Enable auto-merge for Dependabot PRs
-        if: steps.metadata.outputs.package-ecosystem == 'github-actions'
+        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           pull-request-number: ${{ github.event.pull_request.number }}
