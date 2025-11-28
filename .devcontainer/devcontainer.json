@@ -1,0 +1,9 @@
+{
+    "name": "Borskonomicon Recipes",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "zola --version"
+}
