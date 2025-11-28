@@ -28,7 +28,8 @@ RUN set -eux; \
     zola_checksum_url="${zola_url}.sha256"; \
     curl -fsSL "${zola_url}" -o "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
     curl -fsSL "${zola_checksum_url}" -o "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz.sha256"; \
-    (cd /tmp && sha256sum --check "zola-v${ZOLA_VERSION}-${release_arch}.tar.gz.sha256"); \
+    checksum="$(cat "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz.sha256")"; \
+    echo "${checksum}  /tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz" | sha256sum --check -; \
     tar -xf "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz" -C /usr/local/bin zola; \
     rm /tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz*; \
     apt-get purge -y tar; \
