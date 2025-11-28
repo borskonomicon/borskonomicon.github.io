@@ -19,19 +19,20 @@ RUN set -eux; \
     if [ -z "${release_arch}" ]; then \
         host_arch="$(dpkg --print-architecture)"; \
         case "${host_arch}" in \
-            amd64) release_arch="x86_64-unknown-linux-gnu" ;; \
-            arm64) release_arch="aarch64-unknown-linux-gnu" ;; \
+            amd64) release_arch="x86_64-unknown-linux-musl" ;; \
+            arm64) release_arch="aarch64-unknown-linux-musl" ;; \
             *) echo "Unsupported architecture: ${host_arch}" >&2; exit 1 ;; \
         esac; \
     fi; \
+    zola_archive="/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
     zola_url="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
     zola_checksum_url="${zola_url}.sha256"; \
-    curl -fsSL "${zola_url}" -o "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz"; \
-    curl -fsSL "${zola_checksum_url}" -o "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz.sha256"; \
-    checksum="$(cat "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz.sha256")"; \
-    echo "${checksum}  /tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz" | sha256sum --check -; \
-    tar -xf "/tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz" -C /usr/local/bin zola; \
-    rm /tmp/zola-v${ZOLA_VERSION}-${release_arch}.tar.gz*; \
+    curl -fsSL "${zola_url}" -o "${zola_archive}"; \
+    curl -fsSL "${zola_checksum_url}" -o "${zola_archive}.sha256"; \
+    checksum="$(awk 'NF {print $1; exit}' "${zola_archive}.sha256")"; \
+    echo "${checksum}  ${zola_archive}" | sha256sum --check -; \
+    tar -xf "${zola_archive}" -C /usr/local/bin zola; \
+    rm "${zola_archive}"*; \
     apt-get purge -y tar; \
     apt-get autoremove -y; \
     rm -rf /var/lib/apt/lists/*; \
