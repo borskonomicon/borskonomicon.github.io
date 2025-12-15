@@ -25,9 +25,22 @@
     {% if page.extra.source %}
         <p class="source-link">Source: <a href="{{ page.extra.source }}" target="_blank" rel="noopener">{{ page.extra.source }}</a></p>
     {% endif %}
+
+    <div class="cook-mode">
+        <label class="cook-switch">
+            <input type="checkbox" data-cook-toggle aria-label="Toggle cook mode">
+            <span class="cook-track"><span class="cook-thumb"></span></span>
+        </label>
+        <div class="cook-copy">
+            <div class="cook-title">Cook Mode</div>
+            <div class="cook-help">Prevent your screen from going dark</div>
+        </div>
+    </div>
 </section>
 
 <section class="content">
     {{ page.content | safe }}
 </section>
+
+<script defer src="{{ get_url(path="cook-mode.js") }}"></script>
 {% endblock content %}
