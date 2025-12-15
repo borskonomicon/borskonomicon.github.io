@@ -14,6 +14,7 @@ These instructions are for LLM-based contributors working in this repository. Th
   - `description` (short summary)
   - Optional `extra` table with `yield`, `time`, `source`, and `tags` (array).
 - Body should contain the recipe title, yield and timing details if available, an ingredients list, and step-by-step instructions.
+- Include a nutrition estimate (calories/macros) in the body if the original recipe provides it; transcribe values verbatim.
 - Preserve ingredient amounts, units, and wording exactly as published; do not round, localize, or adjust.
 - Attribute the source in `extra.source` using the canonical URL when possible.
 
