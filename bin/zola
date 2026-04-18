@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+version="0.21.0"
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+install_dir="${repo_root}/.cache/zola/${version}"
+zola_bin="${install_dir}/zola"
+
+if [ ! -x "${zola_bin}" ]; then
+    os="$(uname -s)"
+    arch="$(uname -m)"
+
+    case "${os}:${arch}" in
+        Darwin:arm64)
+            target="aarch64-apple-darwin"
+            expected_sha256="5fa8d33c82ee9990cb41020bff0ce40caf98fe4e46d38fdf2740a81a6c78efda"
+            ;;
+        Darwin:x86_64)
+            target="x86_64-apple-darwin"
+            expected_sha256="1bb896d52877ee637b16f6b8d5827ec1e5abbd4a78b541a771c65cebb10f47e8"
+            ;;
+        Linux:aarch64|Linux:arm64)
+            target="aarch64-unknown-linux-gnu"
+            expected_sha256="da7e9def7b9acf0c9b78fb99ce72624504cfee1066ab7a161f09a4126dd7ffe6"
+            ;;
+        Linux:x86_64)
+            target="x86_64-unknown-linux-gnu"
+            expected_sha256="5c37a8f706567d6cad3f0dbc0eaebe3b9591cc301bd67089e5ddc0d0401732d6"
+            ;;
+        *)
+            echo "Unsupported platform for pinned Zola: ${os} ${arch}" >&2
+            exit 1
+            ;;
+    esac
+
+    archive_name="zola-v${version}-${target}.tar.gz"
+    url="https://github.com/getzola/zola/releases/download/v${version}/${archive_name}"
+    tmpdir="$(mktemp -d)"
+    trap 'rm -rf "${tmpdir}"' EXIT
+
+    echo "Installing pinned Zola ${version} for ${target}..." >&2
+    curl -fsSL "${url}" -o "${tmpdir}/${archive_name}"
+
+    if command -v sha256sum >/dev/null 2>&1; then
+        actual_sha256="$(sha256sum "${tmpdir}/${archive_name}" | awk '{print $1}')"
+    else
+        actual_sha256="$(shasum -a 256 "${tmpdir}/${archive_name}" | awk '{print $1}')"
+    fi
+
+    if [ "${actual_sha256}" != "${expected_sha256}" ]; then
+        echo "Checksum mismatch for ${archive_name}" >&2
+        echo "expected: ${expected_sha256}" >&2
+        echo "actual:   ${actual_sha256}" >&2
+        exit 1
+    fi
+
+    mkdir -p "${install_dir}"
+    tar -xzf "${tmpdir}/${archive_name}" -C "${install_dir}" zola
+    chmod +x "${zola_bin}"
+fi
+
+exec "${zola_bin}" "$@"
