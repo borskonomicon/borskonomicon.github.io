@@ -5,7 +5,7 @@ This repository collects family-favorite recipes from around the internet so the
 The site is built with [Zola](https://www.getzola.org/) and published through GitHub Pages. The landing page highlights the archive and includes on-page search for quickly jumping to a recipe.
 
 ## Local development
-This repository pins Zola to the same version used in CI through `bin/zola`. The wrapper downloads Zola `0.21.0` into `.cache/` on first use and verifies the release checksum before running it.
+This repository pins Zola to the same version used in CI through `bin/zola`. The wrapper downloads Zola `0.22.1` into `.cache/` on first use and verifies the release checksum before running it.
 
 If you use [direnv](https://direnv.net/), run `direnv allow` once so plain `zola` resolves to the pinned wrapper. Otherwise, run commands through `./bin/zola`:
 
