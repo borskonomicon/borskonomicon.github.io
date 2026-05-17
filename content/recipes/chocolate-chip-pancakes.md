@@ -15,27 +15,28 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 - **Cook time:** 10 minutes
 
 ## Ingredients
-- 1 1/2 cups (195 g) all-purpose flour
-- 2 1/2 teaspoons baking powder
-- 1/2 teaspoon fine salt
-- 1 tablespoon granulated sugar
-- 1 1/4 cups (295 ml) milk, room temperature
-- 1 large egg
-- 3 tablespoons (42 g) unsalted butter, melted
-- scant 1/2 cup (75 g) chocolate chips
+- 1 1/2 cups all-purpose flour
+- 2 tablespoons sugar
+- 2 1/2 teaspoons baking powder (aluminum-free )
+- 1/4 teaspoon salt
+- 1 1/4 cups milk
+- 1 egg
+- 3 tablespoons melted butter
+- 2 teaspoons vanilla
+- 1/3 cup chocolate chips
 
 ## Instructions
-1. In a large bowl, whisk together the flour, baking powder, salt, and sugar.
-2. In a separate bowl or large measuring cup, whisk the milk, egg, and melted butter until smooth.
-3. Pour the wet ingredients into the dry ingredients and stir with a spatula just until the batter is mostly combined; a few small lumps are fine. Fold in the chocolate chips. Let the batter rest for 5 minutes while you heat the griddle.
-4. Heat a lightly greased skillet or griddle over medium-high heat. Pour 1/4-cup portions of batter onto the hot surface, leaving space between each pancake.
-5. Cook until the edges look set and bubbles form across the surface, 2–3 minutes. Flip and cook until the underside is golden and the center is cooked through, about 1–2 minutes more. Adjust the heat as needed to prevent burning.
-6. Transfer pancakes to a wire rack or warm oven while you cook the remaining batter. Serve warm with butter and maple syrup.
+1. In a large bowl, sift together the flour, baking powder, sugar, and salt.
+2. Make a well in the middle by moving the flour to the sides, then pour in the milk, egg, melted butter, and vanilla. Use a fork to whisk the egg first, then mix it into the liquid ingredients and slowly combine them with the dry ingredients make the batter. Mix until there's no visible flour left, but stop mixing as soon as you can to avoid chewy pancakes.
+3. Add the chocolate chips to the bowl, and gently fold them into the batter with a silicone spatula, just enough to distribute them and cover them in batter.
+4. Heat a non-stick griddle or large pan over medium heat. Once hot, grease, spray, or melt butter on the hot surface. Immediately, pour 1/4 cup of pancake batter onto the greased pan. Cook the pancakes for about 2 minutes, until the edges look defined and bubbles form. Flip the pancakes over and cook for another minute on the other side.
+5. Remove the pancakes from the pan onto a plate, cover them or keep them warm in a 200F oven on a sheet pan while you cook the rest. If you grease the pan with butter and it browns quickly, the heat is too hot. Rinse the pan between batches if needed to cool it down.
+6. Serve the warm pancakes topped with your favorite toppings and syrup.
 
 ## Notes
-- For the fluffiest pancakes, avoid overmixing; stop stirring as soon as the dry streaks disappear.
-- If the batter thickens as it rests, loosen it with a splash of milk to maintain a pourable consistency.
+- For the fluffiest pancakes, stop mixing as soon as there's no visible flour left.
+- If butter browns too quickly in the pan, lower the heat or rinse the pan between batches to cool it down.
 
 ## Nutrition Estimate
-- Serving: 1 serving | Calories: 279kcal | Carbohydrates: 38g | Protein: 8g | Fat: 12g | Saturated Fat: 7g | Fiber: 1g | Sugar: 10g
-- Calculated with Kirkland Signature all-purpose flour, organic sugar, whole milk, large egg, unsalted butter, and semi-sweet chocolate chips, plus generic baking powder; salt has no calories or macros.
+- Serving: 1 pancake | Calories: 258 kcal | Carbohydrates: 34 g | Protein: 7 g | Fat: 11 g | Saturated Fat: 6 g | Trans Fat: 0.2 g | Fiber: 2 g | Sugar: 8 g | Sodium: 404 mg | Cholesterol: 44 mg | Unsaturated Fat: 4 g
+- Nutrition values from the source recipe.
