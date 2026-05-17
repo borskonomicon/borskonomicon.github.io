@@ -23,7 +23,7 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 - 1 large egg
 - 3 tablespoons (42 g) unsalted butter, melted
 - 1/2 teaspoon vanilla
-- 1/2 cup (75 g) chocolate chips
+- 1/2 cup (84 g) chocolate chips
 
 ## Instructions
 1. In a large bowl, whisk together the flour, baking powder, salt, and sugar.
@@ -38,5 +38,5 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 - If the batter thickens as it rests, loosen it with a splash of milk to maintain a pourable consistency.
 
 ## Nutrition Estimate
-- Serving: 1 serving | Calories: 279kcal | Carbohydrates: 38g | Protein: 8g | Fat: 12g | Saturated Fat: 7g | Fiber: 1g | Sugar: 10g
-- Calculated with Kirkland Signature all-purpose flour, organic sugar, whole milk, large egg, unsalted butter, and semi-sweet chocolate chips, plus generic baking powder; salt has no calories or macros.
+- Serving: 1 serving | Calories: 285kcal | Carbohydrates: 39g | Protein: 8g | Fat: 12g | Saturated Fat: 7g | Fiber: 1g | Sugar: 11g
+- Calculated with Kirkland Signature all-purpose flour, organic sugar, whole milk, large egg, unsalted butter, and 1/2 cup (84 g) semi-sweet chocolate chips, plus generic baking powder; salt has no calories or macros.
