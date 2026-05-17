@@ -23,7 +23,7 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 - 1 large egg
 - 3 tablespoons (42 g) unsalted butter, melted
 - 1/2 teaspoon vanilla
-- scant 1/2 cup (75 g) chocolate chips
+- 1/2 cup (75 g) chocolate chips
 
 ## Instructions
 1. In a large bowl, whisk together the flour, baking powder, salt, and sugar.
