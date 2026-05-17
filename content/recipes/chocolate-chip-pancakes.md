@@ -38,5 +38,5 @@ Tall, tender pancakes with crisp edges and puddles of melted chocolate in every 
 - If the batter thickens as it rests, loosen it with a splash of milk to maintain a pourable consistency.
 
 ## Nutrition Estimate
-- Serving: 1 serving | Calories: 285kcal | Carbohydrates: 39g | Protein: 8g | Fat: 12g | Saturated Fat: 7g | Fiber: 1g | Sugar: 11g
+- Serving: 1/6 of recipe | Calories: 285kcal | Carbohydrates: 39g | Protein: 8g | Fat: 12g | Saturated Fat: 7g | Fiber: 1g | Sugar: 11g
 - Calculated with Kirkland Signature all-purpose flour, organic sugar, whole milk, large egg, unsalted butter, and 1/2 cup (84 g) semi-sweet chocolate chips, plus generic baking powder; salt has no calories or macros.
