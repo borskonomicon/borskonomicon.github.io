@@ -34,15 +34,5 @@ Soft oatmeal raisin cookies made with cinnamon applesauce, rolled oats, and coco
 5. Scoop small spoonfuls and gently flatten (they don't spread much).
 6. Bake 10–12 minutes until set but still soft.
 
-## Notes
-- This estimate assumes Costco-carried ingredients: Quaker old fashioned rolled oats, Kirkland Signature organic unbleached all-purpose flour, Kirkland Signature organic applesauce plus cinnamon, Kirkland Signature organic virgin coconut oil, Sun-Maid raisins, Kirkland Signature large eggs, and Kirkland Signature organic maple syrup.
-- The nutrition estimate uses 2 tablespoons maple syrup, a 481 g raw batch weight, and an estimated 10% baking weight loss for about 433 g finished cookies.
-- Using 1 tablespoon maple syrup instead of 2 tablespoons lowers the estimate by roughly 25 kcal and 6 g carbohydrates per 100 g finished cookies.
-
 ## Nutrition Estimate (Per 100g Final Output)
-- Calories: 349 kcal
-- Protein: 7 g
-- Carbohydrates: 49 g
-- Fat: 15 g
-- Fiber: 3 g
-- Sugar: 16 g
+- Calories: 349 kcal | Carbohydrates: 49 g | Protein: 7 g | Fat: 15 g | Fiber: 3 g | Sugar: 16 g
