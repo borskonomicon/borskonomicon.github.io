@@ -25,7 +25,7 @@ A moist, bakery-style banana bread loaded with mashed bananas and chocolate chip
 - 1 1/3 cups (180 g) all-purpose flour or 1-to-1 gluten-free baking flour
 - 1 teaspoon baking soda
 - 1/2 teaspoon fine salt
-- 3/4 cup (140 g) mini chocolate chips, plus a handful for topping
+- 3/4 cup (140 g) mini chocolate chips, plus an optional handful for topping
 
 ## Instructions
 1. Heat the oven to 325°F (165°C). Grease a 9×5-inch loaf pan and line it with parchment.
@@ -39,3 +39,8 @@ A moist, bakery-style banana bread loaded with mashed bananas and chocolate chip
 ## Notes
 - For the best texture, use very ripe bananas with plenty of brown spots and measure the mash to 1 1/2 cups.
 - Sour cream can be swapped for the Greek yogurt in equal amounts.
+
+## Nutrition Estimate (Per 100g Cooled Loaf)
+- Calories: 327 kcal | Carbohydrates: 49 g | Protein: 6 g | Fat: 13 g
+- Based on a 1,045 g cooled loaf and the listed 140 g of chocolate chips; the optional topping is not included.
+- Calculated from nutrition-label values for Kirkland Signature ingredients where available: plain Greek yogurt (100 kcal, 6 g carbohydrate, 18 g protein per 170 g), all-purpose flour (110 kcal, 23 g carbohydrate, 4 g protein per 30 g), unsalted butter (100 kcal, 11 g fat per 14 g), large eggs (70 kcal, 6 g protein, 5 g fat each), organic granulated sugar (15 kcal, 4 g carbohydrate per 4 g), and semi-sweet chocolate chips (70 kcal, 9 g carbohydrate, 1 g protein, 4.5 g fat per 15 g). Bananas, vanilla, baking soda, salt, and brown sugar use standard label/database values. Values are estimates and rounded to the nearest gram.
