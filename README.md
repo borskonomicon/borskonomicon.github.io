@@ -15,6 +15,8 @@ If you use [direnv](https://direnv.net/), run `direnv allow` once so plain `zola
 ```
 
 ## Repository layout
+The chocolate chip pancake recipe includes ingredient scaling: select ½×, 1×, or 2×, or enter any positive custom multiplier. Both household and metric quantities scale from the original recipe. Cooking instructions, times, and per-serving nutrition stay as written; fractional eggs may need beating and measuring. With JavaScript disabled, the original recipe remains readable.
+
 Run `npm test` with Node.js 22 or newer to check interactive recipe behavior. The test suite uses Node's built-in test runner and requires no dependency installation. CI runs these tests before building the site.
 
 - `content/recipes/` — individual recipe files in Markdown, each including ingredients, instructions, yield, and notes.

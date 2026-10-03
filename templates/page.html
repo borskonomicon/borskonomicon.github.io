@@ -39,8 +39,30 @@
 </section>
 
 <section class="content">
+    {% if page.extra.scalable | default(value=false) %}
+    <div class="recipe-scale" data-recipe-scale hidden>
+        <div class="scale-copy">
+            <strong>Make it your size.</strong>
+            <p id="scale-help">Scale ingredients. Cooking times stay the same.</p>
+        </div>
+        <div class="scale-controls">
+            <div class="scale-presets" role="group" aria-label="Recipe scale presets">
+                <button type="button" data-scale="0.5" aria-pressed="false">½×</button>
+                <button type="button" data-scale="1" aria-pressed="true">1×</button>
+                <button type="button" data-scale="2" aria-pressed="false">2×</button>
+            </div>
+            <label class="scale-custom" for="recipe-multiplier">Custom
+                <span><input id="recipe-multiplier" type="number" inputmode="decimal" min="0" step="any" value="1" aria-describedby="scale-help scale-status"> ×</span>
+            </label>
+        </div>
+        <p id="scale-status" class="scale-status" role="status" aria-live="polite">Original quantities · 1×</p>
+    </div>
+    {% endif %}
     {{ page.content | safe }}
 </section>
 
+{% if page.extra.scalable | default(value=false) %}
+<script defer src="{{ get_url(path="recipe-scale.js") }}"></script>
+{% endif %}
 <script defer src="{{ get_url(path="cook-mode.js") }}"></script>
 {% endblock content %}

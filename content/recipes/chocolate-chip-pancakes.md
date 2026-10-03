@@ -2,6 +2,7 @@
 title = "Chocolate Chip Pancakes"
 description = "Fluffy pancakes with melty chocolate chips in every bite."
 [extra]
+scalable = true
 yield = "6 servings"
 time = "Prep 5 minutes · Cook 10 minutes"
 source = "https://www.laurafuentes.com/chocolate-chip-pancakes/"
