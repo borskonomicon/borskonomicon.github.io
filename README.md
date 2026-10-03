@@ -15,6 +15,8 @@ If you use [direnv](https://direnv.net/), run `direnv allow` once so plain `zola
 ```
 
 ## Repository layout
+Run `npm test` with Node.js 22 or newer to check interactive recipe behavior. The test suite uses Node's built-in test runner and requires no dependency installation. CI runs these tests before building the site.
+
 - `content/recipes/` — individual recipe files in Markdown, each including ingredients, instructions, yield, and notes.
 - `config.toml` — site settings and metadata used during generation.
 
