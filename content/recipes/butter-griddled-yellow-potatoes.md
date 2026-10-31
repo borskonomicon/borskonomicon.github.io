@@ -66,3 +66,9 @@ is for browning and flavor development.
 - Letting the potatoes steam-dry after boiling helps the surfaces brown.
 - Turning every 3–4 minutes allows individual sides to develop color.
 - The recipe uses very mild seasoning and works well for young children.
+
+## Nutrition Estimate (Per 100g Final Output)
+
+- Calories: 127 kcal | Carbohydrates: 21 g | Protein: 2 g | Fat: 4 g | Fiber: 2 g | Sugar: 1 g
+- Based on 1 lb (453.6 g) yellow potatoes boiled and griddled down to about 408 g, plus 1.5 tbsp (21.3 g) of the listed 1–2 tbsp salted butter, for about 430 g final output.
+- Calculated from USDA SR Legacy per-100 g values for boiled potatoes (cooked in skin, without salt) and salted butter (FDC 173410); the salt added to the water and to taste is not counted. Values are estimates and rounded to the nearest gram.
